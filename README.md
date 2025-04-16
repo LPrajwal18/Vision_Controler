@@ -137,6 +137,38 @@ For issues or feature requests:
 ---
 
 
+## OUTPUT OF THE PROJECT 
+
+🎥 Output Preview
+Here’s what the application does in real-time:
+
+👁️ Cursor Tracking: The mouse cursor follows your eye movements smoothly across the screen.
+
+👀 Blink Detection:
+
+Left blink → triggers left click
+
+Right blink → triggers right click
+
+🔍 Zoom:
+
+Bringing your eyes closer together = Zoom In
+
+Moving eyes apart = Zoom Out
+
+📸 Screenshot:
+
+Closing both eyes for 2.5+ seconds automatically saves a screenshot.
+
+❌ Exit:
+
+Press q to stop the application.
+
+
+
+
+
+
+https://github.com/user-attachments/assets/2a3f214a-8991-4624-89be-217ce4f27855
 
 Made with ❤️ to empower and enable eye-based control for everyone.
-
