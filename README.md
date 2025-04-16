@@ -64,80 +64,78 @@ Run the application:
 
 ```bash
 python eye_control.py
-Controls:
 
-Cursor Movement: Move your eyes to move the cursor.
+# Eye-Controlled Mouse & Interaction System
 
-Left Click: Blink your left eye.
+A Python-based application using OpenCV, MediaPipe, and PyAutoGUI that enables users to control their computer using only their eye movements and gestures — designed for accessibility and hands-free interaction.
 
-Right Click: Blink your right eye.
+---
 
-Zoom In/Out: Bring your eyes closer or move them apart.
+## 🎮 Controls
 
-Screenshot: Close both eyes for at least 2.5 seconds.
+| Action              | Trigger                                  |
+|---------------------|-------------------------------------------|
+| **Cursor Movement** | Move your eyes around                     |
+| **Left Click**      | Blink your **left eye**                   |
+| **Right Click**     | Blink your **right eye**                  |
+| **Zoom In/Out**     | Bring eyes closer / move them apart       |
+| **Screenshot**      | Close **both eyes** for at least 2.5 sec  |
+| **Exit**            | Press `q`                                 |
 
-Exit: Press q to quit the application.
+---
 
-Configuration
+## ⚙️ Configuration
 
-Adjust the following parameters in eye_control.py to tailor behavior:
+To tailor the application’s behavior, you can modify the following parameters in `eye_control.py`:
 
-BLINK_THRESHOLD: Sensitivity for blink detection (lower = more sensitive).
+- `BLINK_THRESHOLD`: Controls sensitivity for blink detection (lower = more sensitive).
+- `ZOOM_SENSITIVITY`: Minimum eye-distance change needed to trigger zoom.
+- `CLICK_COOLDOWN`: Time (in seconds) between click events.
+- `ZOOM_COOLDOWN`: Time (in seconds) between zoom actions.
+- `SCREENSHOT_DURATION`: Duration (in seconds) both eyes must be closed for a screenshot to trigger.
 
-ZOOM_SENSITIVITY: Minimum eye-distance change to trigger zoom.
+---
 
-CLICK_COOLDOWN: Time (seconds) between clicks to prevent rapid-fire actions.
+## 🗺️ Roadmap
 
-ZOOM_COOLDOWN: Time (seconds) between zoom actions.
+- ✅ Cursor control with eye tracking
+- ✅ Blink-based click detection
+- ✅ Eye-distance-based zoom
+- ✅ Screenshot functionality via eye closure
+- [ ] Calibration routine for individual users
+- [ ] On-screen GUI overlay (eye status, zoom level, click indicators)
+- [ ] Multi-face support and user toggle
+- [ ] Voice command and accessibility tool integration
+- [ ] Cross-platform packaging for Windows, macOS, and Linux
 
-SCREENSHOT_DURATION: Duration (seconds) both eyes must be closed to capture a screenshot.
+---
 
-Roadmap
+## ❓ Troubleshooting & FAQs
 
-Calibration Routine: Implement a quick calibration for each user to adjust thresholds.
+**Q: Camera not detected?**  
+🔧 Make sure no other application is using the webcam. Try changing the index in `cv2.VideoCapture(0)` to `1`, `2`, etc.
 
-GUI Overlay: On-screen indicators showing eye status, clicks, and zoom level.
+**Q: Blinks not registering?**  
+🔧 Adjust `BLINK_THRESHOLD` in the code and ensure the lighting is adequate.
 
-Multi-Face Support: Handle multiple faces or toggle between users.
+**Q: Zoom too sensitive or not triggering?**  
+🔧 Modify `ZOOM_SENSITIVITY` and `ZOOM_COOLDOWN`.
 
-Cross-Platform Packaging: Create installers for Windows, macOS, and Linux.
+**Q: Application is lagging?**  
+🔧 Reduce the webcam resolution or increase `frame_skip_rate`.
 
-Integration with Other Accessibility Tools: Combine with voice commands or switch devices.
+---
 
-Troubleshooting & FAQs
+## 📬 Support
 
-Q: Camera not detected?
+For issues or feature requests:
 
-Ensure no other application is using the webcam. Verify cv2.VideoCapture(0) index or try other indices.
+- 📌 Open a GitHub Issue
+- 📧 Contact the maintainer: `lprajwal18@gmail.com`
 
-Q: Blinks not registering?
+---
 
-Adjust BLINK_THRESHOLD in code. Check lighting conditions.
 
-Q: Zoom too sensitive/insensitive?
 
-Modify ZOOM_SENSITIVITY and ZOOM_COOLDOWN values.
+Made with ❤️ to empower and enable eye-based control for everyone.
 
-Q: Application lags?
-
-Increase frame_skip_rate or reduce video resolution.
-
-Contributing
-
-Contributions are welcome! To contribute:
-
-Fork the repository.
-
-Create a new branch (git checkout -b feature/YourFeature).
-
-Commit your changes (git commit -m 'Add YourFeature').
-
-Push to the branch (git push origin feature/YourFeature).
-
-Open a Pull Request.
-
-Please ensure your code follows the existing style and includes relevant documentation and tests where applicable.
-
-Support
-
-For questions, issues, or requests, please open an issue on GitHub or contact the maintainer at your.email@example.com.
