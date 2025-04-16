@@ -62,8 +62,9 @@ Developed at the intersection of human‑computer interaction and accessibility,
 ## Usage
 Run the application:
 
-```bash
+'''bash
 python eye_control.py
+'''
 
 # Eye-Controlled Mouse & Interaction System
 
